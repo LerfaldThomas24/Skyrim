@@ -112,3 +112,8 @@ else:
 sleep(1)
 
 print("After traveling a good distance, you approach a locked door. Waht do?")
+
+print("1.")
+print("2.")
+print("3.")
+print("4.")
