@@ -1,3 +1,5 @@
+import sys 
+from time import sleep
 import random
 #strength
 #intelligence
@@ -47,20 +49,17 @@ print("You have " + str(points) + " skill points remaining")
 
 charisma = int(input("What is your charisma? (0-100)\n>"))
 
+if charisma > 100 or charisma < 0 or charisma > points:
+    print("You can't do that! You lose.")
+    exit()
+points = points - charisma
+print("Wow such charisma! CHARISMA SET TO " + str(charisma))
+print("You have " + str(points) + " skill points remaining")
+if points > 0:
+    print("You have points left over... next time try to use all available points.")
+    sleep(1)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+sleep(1)
 
 print("You encounter a menacing wall. Waht do?")
 
@@ -69,7 +68,7 @@ print("2. Reason with wall")
 print("3. Climb wall")
 print("4. Magic wall")
 
-choice = input()
+choice = input(">")
 
 if choice == "1":
     roll = random.randrange(0,strength)
@@ -80,11 +79,36 @@ if choice == "1":
         print("Your fist shatters.")
         exit()
 elif choice == "2":
-    print()
+    roll = random.randrange(0, charisma)
+    if roll >= 50:
+        print("By some miracle you reasoned a wall out of the way")
+
+    else:
+        print("You stupidly try to reason with the wall. You fail.")
+        exit()
 elif choice == "3":
+    roll = random.randrange(0, strength)
+    roll2 = random.randrange(0, intelligence)
+    if roll > 45 and roll2 > 30:
+        print("You scale the wall.")
+
+    else:
+        print("You start to climb the wall but before reaching the top you fall, breaking your neck.")
+        exit()
     print()
 elif choice == "4":
-    print()
+    roll = random.randrange(0, magic)
+    if roll > 30:
+        print("You magic the wall out of the way.")
+    
+    else:
+        print("Your magic fails you, leaving the wall in its place.")
+        exit()
 else:
     print("You can't do that! You lose.")
 
+
+
+sleep(1)
+
+print("After traveling a good distance, you approach a locked door. Waht do?")
