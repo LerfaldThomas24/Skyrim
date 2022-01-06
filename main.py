@@ -123,7 +123,7 @@ choice = input(">")
 
 if choice == "1":
     roll = random.randrange(0,strength)
-    if roll > 35:
+    if roll >= 30:
         print("You rip the door down, leaving nothing standing in your way")
 
     else:
