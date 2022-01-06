@@ -169,7 +169,7 @@ elif choice == "4":
         exit()
 else:
     print("You can't do that! You lose.")
-
+    exit()
 sleep(1)
 
 print("While traveling through the cave the door gaurded, you begin to see a faint light getting closer. Within minutes, you are approached by a group of four armed men carrying a lantern, which was the source of the light you had seen before.")
@@ -217,6 +217,7 @@ elif choice == "4":
         exit()
 else:
     print("You can't do that! You lose.")
+    exit()
 
 sleep(1)
 
@@ -332,3 +333,4 @@ elif choice == "4":
         exit()
 else:
     print("You can't do that! You lose.")
+    exit()
