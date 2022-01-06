@@ -11,57 +11,69 @@ points = 250
 
 print("Welcome, adventurer! Skill point time! You will have 5 skills to spend points on. (250 points available)")
 
-strength = int(input("How strong are you? (0-100)\n>"))
+print("Press enter to continue")
+input()
 
-if strength > 100 or strength < 0 or strength > points:
-    print("You can't do that! You lose.")
-    exit()
-points = points - strength
-print("Wow such stronk! STRENGTH SET TO " + str(strength))
-print("You have " + str(points) + " skill points remaining")
+if input == "My preset":
+    strength = 75
+    intelligence = 75
+    magic = 40
+    sneak = 30
+    charisma = 30
+    
+else:
+    strength = int(input("How strong are you? (0-100)\n>"))
 
-intelligence = int(input("How smart are you? (0-100)\n>"))
 
-if intelligence > 100 or intelligence < 0 or intelligence > points:
-    print("You can't do that! You lose.")
-    exit()
-points = points - intelligence
-print("Wow such smart! INTELLIGENCE SET TO " + str(intelligence))
-print("You have " + str(points) + " skill points remaining")
+    if strength > 100 or strength < 0 or strength > points:
+        print("You can't do that! You lose.")
+        exit()
+    points = points - strength
+    print("Wow such stronk! STRENGTH SET TO " + str(strength))
+    print("You have " + str(points) + " skill points remaining")
 
-magic = int(input("What is your magic stat? (0-100)\n>"))
+    intelligence = int(input("How smart are you? (0-100)\n>"))
 
-if magic > 100 or magic < 0 or magic > points:
-    print("You can't do that! You lose.")
-    exit()
-points = points - magic
-print("Wow such magics! MAGIC SET TO " + str(magic))
-print("You have " + str(points) + " skill points remaining")
+    if intelligence > 100 or intelligence < 0 or intelligence > points:
+        print("You can't do that! You lose.")
+        exit()
+    points = points - intelligence
+    print("Wow such smart! INTELLIGENCE SET TO " + str(intelligence))
+    print("You have " + str(points) + " skill points remaining")
 
-sneak = int(input("What is your sneak? (0-100)\n>"))
+    magic = int(input("What is your magic stat? (0-100)\n>"))
 
-if sneak > 100 or sneak < 0 or sneak > points:
-    print("You can't do that! You lose.")
-    exit()
-points = points - sneak
-print("Wow such sneak! SNEAK SET TO " + str(sneak))
-print("You have " + str(points) + " skill points remaining")
+    if magic > 100 or magic < 0 or magic > points:
+        print("You can't do that! You lose.")
+        exit()
+    points = points - magic
+    print("Wow such magics! MAGIC SET TO " + str(magic))
+    print("You have " + str(points) + " skill points remaining")
 
-charisma = int(input("What is your charisma? (0-100)\n>"))
+    sneak = int(input("What is your sneak? (0-100)\n>"))
 
-if charisma > 100 or charisma < 0 or charisma > points:
-    print("You can't do that! You lose.")
-    exit()
-points = points - charisma
-print("Wow such charisma! CHARISMA SET TO " + str(charisma))
-print("You have " + str(points) + " skill points remaining")
-if points > 0:
-    print("You have points left over... next time try to use all available points.")
+    if sneak > 100 or sneak < 0 or sneak > points:
+        print("You can't do that! You lose.")
+        exit()
+    points = points - sneak
+    print("Wow such sneak! SNEAK SET TO " + str(sneak))
+    print("You have " + str(points) + " skill points remaining")
+
+    charisma = int(input("What is your charisma? (0-100)\n>"))
+
+    if charisma > 100 or charisma < 0 or charisma > points:
+        print("You can't do that! You lose.")
+        exit()
+    points = points - charisma
+    print("Wow such charisma! CHARISMA SET TO " + str(charisma))
+    print("You have " + str(points) + " skill points remaining")
+    if points > 0:
+        print("You have points left over... next time try to use all available points.")
+        sleep(1)
+
     sleep(1)
 
-sleep(1)
-
-print("You encounter a menacing wall. Waht do?")
+    print("You encounter a menacing wall. Waht do?")
 
 print("1. Punch wall")
 print("2. Reason with wall")
@@ -140,7 +152,7 @@ elif choice == "2":
 elif choice == "3":
     roll = random.randrange(0, charisma)
     roll2 = random.randrange(0, intelligence)
-    if roll > 20 and roll2 > 30:
+    if roll > 15 and roll2 > 30:
         print("You pick the lock and the door swings open, making way for you")
 
     else:
