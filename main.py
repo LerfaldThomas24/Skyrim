@@ -12,15 +12,15 @@ points = 250
 print("Welcome, adventurer! Skill point time! You will have 5 skills to spend points on. (250 points available)")
 
 print("Press enter to continue")
-input()
+preset = input()
 
-if input == "My preset":
+if preset == "My preset":
     strength = 75
     intelligence = 75
     magic = 40
     sneak = 30
     charisma = 30
-    
+
 else:
     strength = int(input("How strong are you? (0-100)\n>"))
 
