@@ -118,7 +118,7 @@ elif choice == "4":
         exit()
 else:
     print("You can't do that! You lose.")
-
+    exit()
 
 
 sleep(1)
